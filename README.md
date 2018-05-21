@@ -17,7 +17,7 @@ pip install -r requirements.txt
 
 One can you console application, or import `is_passport_valid` function.
 
-## How to you console application
+## How to use console application
 Console script takes 3 arguments (all dates in the format DD.MM.YYYY):
 * date_of_bith (positional): the date of birth of passport owner ,
 * date_of_passport_issue (positional): the date of passport issuance,
@@ -43,7 +43,7 @@ True
 from passport_validator import is_passport_valid
 ```
 
-## How to use
+### How to use imported function
 The function `is_passport_valid` takes 3 arguments:
 * date_of_bith: the date of birth of passport owner,
 * date_of_passport_issue: the date of passport issuance,
