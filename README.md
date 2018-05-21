@@ -32,16 +32,19 @@ The function `is_passport_valid` takes 3 arguments:
 ```
 from passport_validator import is_passport_valid
 from datetime import date
+
 is_passport_valid(
     date_of_birth=date(2000, 1, 1),
     date_of_passport_issue=date(2014, 1, 15)
 )
 Out[6]: True
+
 is_passport_valid(
     date_of_birth=date(1998, 1, 1),
     date_of_passport_issue=date(2012, 1, 15)
 )
 Out[7]: False
+
 is_passport_valid(
     date_of_birth=date(1998, 1, 1),
     date_of_passport_issue=date(2012, 1, 15),
