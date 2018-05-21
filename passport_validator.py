@@ -1,5 +1,6 @@
 from datetime import date
 from dateutil.relativedelta import relativedelta
+from parser import parse_arguments
 
 
 def get_birtday_date(date_of_birth, age):
@@ -54,3 +55,13 @@ def is_passport_valid(
     if date_of_validation_check >= passport_expiration_date:
         return False
     return True
+
+
+if __name__ == '__main__':
+    arguments = parse_arguments()
+    validation_status = is_passport_valid(
+        arguments.date_of_birth,
+        arguments.date_of_passport_issue,
+        date_of_validation_check=arguments.date_of_validation_check
+    )
+    print(validation_status)

@@ -15,6 +15,29 @@ necessary packages, using the following command:
 pip install -r requirements.txt
 ```
 
+One can you console application, or import `is_passport_valid` function.
+
+## How to you console application
+Console script takes 3 arguments (all dates in the format DD.MM.YYYY):
+* date_of_bith (positional): the date of birth of passport owner ,
+* date_of_passport_issue (positional): the date of passport issuance,
+* -dv, --date_of_validation_check (optional): the date of validation,
+ by default, it is today date. Thus, the script can validate passports
+ retrospectively.
+Validation status (True for valid, False for expired passports) is
+returned.
+### Example of use
+```
+$ python passport_validator.py 01.01.2000 01.01.2013
+False
+$ python passport_validator.py 01.01.2000 01.01.2014
+True
+$ python passport_validator.py 01.01.2000 01.01.2014 -dv 01.02.2020
+False
+$ python passport_validator.py 01.01.2000 01.01.2014 -dv 01.01.2020
+True
+```
+
 ## How to import
 ```
 from passport_validator import is_passport_valid
