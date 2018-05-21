@@ -1,5 +1,5 @@
 # Passport validator service
-The function `is_passport_valid` produces passport validation.
+The project produces passport validation.
 In Russia, the first passport is given at the age of 14.
 When one achieves 20 or 45 years old, he must renew passport in one month.
 So, old passports are valid only one month after the birthday of 20 and 45 y.o.
@@ -15,7 +15,7 @@ necessary packages, using the following command:
 pip install -r requirements.txt
 ```
 
-One can you console application, or import `is_passport_valid` function.
+One can use console application, or import `is_passport_valid` function.
 
 ## How to use console application
 Console script takes 3 arguments (all dates in the format DD.MM.YYYY):
